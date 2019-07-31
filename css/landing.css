@@ -1,0 +1,186 @@
+/*
+Format of CSS is:
+
+[page]-[uniqueName*]
+
+uniqueName* - may have multiple parts to the unique name
+
+ex: .landing-animation-container
+
+*** The ruleset above applies to the top level parent element, child elements of this
+parent element will just have unique names, but when called upon in css, must refer to
+parent element first. This prevents potential overlap
+
+*/
+
+
+/*
+===================
+Scrolling Container
+===================
+*/
+
+.landing-scroll-container {
+    overflow: hidden;
+}
+
+.scrolling-img {
+    width: 4738px;
+    height: 400px;
+    background: url("../assets/scrolldogs2.jpg") repeat-x;
+    animation-name: scrollImages;
+    animation-duration: 40s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*
+================
+Navbar Container
+================
+*/
+
+.landing-navbar {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: white;
+    padding: 20px 0px;
+    box-shadow: 0px 1px 1px gray;
+    margin-bottom: 2px;
+}
+
+.navlink {
+    opacity: 0;
+    flex: 1;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: bold;
+}
+
+.navlink:hover {
+    color: black;
+}
+
+.navlink:nth-of-type(1) {
+    animation-name: loadNavLinks;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.navlink:nth-of-type(2) {
+    animation-name: loadNavLinks;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.navlink:nth-of-type(3) {
+    animation-name: loadNavLinks;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.navlink:nth-of-type(4) {
+    animation-name: loadNavLinks;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+
+/*
+================
+Header Container
+================
+*/
+
+.landing-header {
+    background-color: #FAF9F9;
+    text-align: center;
+    color: var(--primary-text-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.landing-header img {
+    width: 75px;
+    height: 75px;
+}
+
+.landing-header h1 {
+    margin: 10px auto;
+    font-weight: normal;
+}
+
+.landing-header .button-wrapper {
+    background-color: var(--button-back-color);
+    margin-top: 30px;
+    display: inline-block;
+    position: relative;
+    width: 175px;
+    height: 37px;
+}
+
+.landing-header .button-wrapper button {
+    background-color: var(--button-bg-color);
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+
+.landing-header .button-wrapper button:hover {
+    background-color: var(--button-hover-bg-color);
+    top: -2px;
+    left: -2px;
+}
+
+.landing-header .load-container {
+    opacity: 0;
+    animation-name: loadHeader;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+
+/*
+==================
+Gallery of Hotdogs
+==================
+*/
+
+.landing-gallery .gallery-item {
+    transform-style: preserve-3d;
+    transform: rotate3d(1,1,0,45deg);
+    animation-name: galleryLoad;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    text-align: center;
+    opacity: 0;
+}
+
+.landing-gallery .gallery-img {
+    width: 80%;
+    height: auto;
+}
+
+.landing-gallery h2 {
+    margin-top: 30%;
+}
+
+.landing-gallery p {
+    font-size: 18px;
+    color: var(--primary-text-color);
+}
+
+

@@ -1,0 +1,42 @@
+@keyframes scrollImages {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-2369px);
+    }
+}
+
+@keyframes loadNavLinks {
+    from {
+        transform: translateY(-20px);
+    }
+    
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loadHeader {
+    from {
+        transform: translateY(-200px);
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes galleryLoad {
+    from {
+        transform: rotate3d(1,1,0,45deg);
+    }
+
+    to {
+        transform: rotate3d(0,0,0,0deg);
+        opacity: 1;
+    }
+}

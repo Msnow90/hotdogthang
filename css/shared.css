@@ -1,0 +1,40 @@
+/*
+
+Here is the CSS shared by all pages
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #3e5e7e;
+    --button-bg-color: #3A6480;
+    --button-hover-bg-color: #214f6e;
+    --button-back-color: #66a6d1;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 80px;
+}
+
+.row {
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+[class^="col-xs-"] {
+    float: left;
+}
+
+.col-xs-10 {
+    width: 50%;
+}
